@@ -1,0 +1,20 @@
+---
+layout: default
+title: Vim Erlang
+---
+
+<div id="home">
+  <br/>
+  <h1>Welcome</h1>
+  <p>The vim-erlang project aims to provide a solid toolchain for vim users developing erlang projects.</p>
+  {% for category in site.categories %}
+  <h1>{{ category | first | capitalize }}</h1>
+    <ul class="posts">
+    {% for posts in category %}
+      {% for post in posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
